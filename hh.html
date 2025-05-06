@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محفظة Cinertrex</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans Arabic', sans-serif;
+            background: linear-gradient(to right, #444B54, #5C6670); /* رمادي بارد */
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            direction: rtl;
+            color: #E6E6E6;
+        }
+
+        /* شريط التنقل مع الشعار */
+        .navbar {
+            background: #222831;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            font-size: 18px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .logo {
+            width: 100px;
+            height: auto;
+            margin-right: 15px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .nav-links a:hover {
+            color: #00ADB5;
+            transform: scale(1.1);
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 100px 20px;
+        }
+
+        .section {
+            background: #D3D3D3;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            color: #36454F; /* لون رمادي مزرق داكن جدًا */
+        }
+
+        .section:hover {
+            transform: scale(1.05);
+        }
+
+        .button {
+            padding: 10px 20px;
+            background: #444B54;
+            border: none;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #222831;
+            transform: scale(1.1);
+        }
+
+        /* زر تغيير اللغة */
+        .language-switch {
+            margin-top: 20px;
+        }
+
+        /* قسم المهارات */
+        .skills-container {
+            margin-top: 20px;
+        }
+
+        .skills-label {
+            font-size: 20px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .skills-bar {
+            width: 300px;
+            height: 20px;
+            background: #222831;
+            position: relative;
+            border-radius: 5px;
+            overflow: hidden;
+            margin: auto;
+        }
+
+        .skills-fill {
+            width: 90%;
+            height: 100%;
+            background: #00ADB5;
+            color: white;
+            font-weight: bold;
+            line-height: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <img src="logo.png" alt="Cinertrex Logo" class="logo">
+        <div class="nav-links">
+            <a href="#about">نبذة عني</a>
+            <a href="#skills">المهارات</a>
+            <a href="#design">التصميم ثلاثي الأبعاد</a>
+            <a href="#contact">تواصل معي</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section" id="about">
+            <h2 id="about-title">من أنا؟</h2>
+            <p id="about-text">أنا مصمم مبدع متخصص في Photoshop و After Effects، كما أعمل في التصميم ثلاثي الأبعاد لإنشاء تجارب بصرية مميزة.</p>
+        </div>
+
+        <div class="section" id="skills">
+            <h2 id="skills-title">أبرز مهاراتي</h2>
+            <div class="skills-container">
+                <div class="skills-label" id="skill1">تصميم UI/UX</div>
+                <div class="skills-bar">
+                    <div class="skills-fill">80%</div>
+                </div>
+
+                <div class="skills-label" id="skill2">مونتاج الفيديو في After Effects</div>
+                <div class="skills-bar">
+                    <div class="skills-fill">90%</div>
+                </div>
+
+                <div class="skills-label" id="skill3">التصميم الجرافيكي في Photoshop</div>
+                <div class="skills-bar">
+                    <div class="skills-fill">95%</div>
+                </div>
+
+                <div class="skills-label" id="skill4">التصميم ثلاثي الأبعاد</div>
+                <div class="skills-bar">
+                    <div class="skills-fill">85%</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="design">
+            <h2>التصميم ثلاثي الأبعاد</h2>
+            <p>أنا متخصص في إنشاء بيئات وتجارب ثلاثية الأبعاد باستخدام أدوات متقدمة، لإنتاج تصاميم جذابة وواقعية.</p>
+        </div>
+
+        <div class="section" id="contact">
+            <h2>اتصل بي مباشرة</h2>
+            <p id="contact-text">يمكنك التواصل معي فورًا بالنقر على الزر أدناه.</p>
+            <a href="tel:0553283413" class="button" id="call-btn">اتصل الآن</a>
+        </div>
+
+        <div class="section language-switch">
+            <button class="button" onclick="switchLanguage()">تغيير اللغة إلى الإنجليزية</button>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p id="copyright">جميع الحقوق محفوظة © 2025 Cinertrex</p>
+    </div>
+
+    <script>
+        function switchLanguage() {
+            let langButton = document.querySelector(".language-switch button");
+            if (langButton.innerText === "تغيير اللغة إلى الإنجليزية") {
+                document.getElementById("about-title").innerText = "About Me";
+                document.getElementById("about-text").innerText = "I am a creative designer specializing in Photoshop, After Effects, and 3D design.";
+                document.getElementById("skills-title").innerText = "Key Skills";
+                document.getElementById("skill1").innerText = "UI/UX Design";
+                document.getElementById("skill2").innerText = "Video Editing in After Effects";
+                document.getElementById("skill3").innerText = "Graphic Design in Photoshop";
+                document.getElementById("skill4").innerText = "3D Design";
+                document.getElementById("contact-text").innerText = "You can contact me instantly by clicking the button below.";
+                document.getElementById("call-btn").innerText = "Call Now";
+                document.getElementById("copyright").innerText = "All Rights Reserved © 2025 Cinertrex";
+                langButton.innerText = "Switch to Arabic";
+            } else {
+                location.reload();
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+>
+
+
